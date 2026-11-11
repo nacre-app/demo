@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+  Politique de confidentialité de l'application iPhone Nacre, publiée sur la démo publique :
+  https://nacre-app.github.io/demo/confidentialite-iphone.html (lien dans l'app et dans App Store Connect).
+  Page statique, sans script ni ressource externe. Texte : Constance (conformité). Les trous à remplir sont marqués class="todo".
+  scripts/publish-demo.sh refuse de publier tant qu'il reste un trou ou un crochet dans le texte.
+-->
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f2ed" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#241a1f" media="(prefers-color-scheme: dark)" />
+  <title>Confidentialité de l'application Nacre</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+    :root { --bg: #f8f2ed; --card: #fffdfb; --fg: #241a1f; --muted: #6f6368; --line: #e8ddd5; --accent: #c2255c; --accent-soft: #fbe8f0; color-scheme: light; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1d1418; --card: #2a1f24; --fg: #f8f2ed; --muted: #b3a5ab; --line: #3b2d33; --accent: #f0598a; --accent-soft: #3a1827; color-scheme: dark; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--fg); }
+    body { font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Avenir Next", system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+    main { max-width: 640px; margin: 0 auto; padding: max(20px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 40px max(16px, env(safe-area-inset-left)); overflow-wrap: anywhere; }
+    .brand { font-weight: 800; color: var(--accent); margin: 0 0 8px; letter-spacing: -0.01em; }
+    h1 { font-size: clamp(26px, 7vw, 32px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 12px; text-wrap: balance; }
+    h2 { font-size: 19px; letter-spacing: -0.01em; margin: 28px 0 8px; }
+    p, li { max-width: 38em; }
+    p { margin: 0 0 10px; }
+    ul { margin: 0 0 10px; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .muted { color: var(--muted); font-size: 14px; }
+    .bref { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px 6px; }
+    mark.todo { background: var(--accent-soft); color: var(--accent); font-weight: 600; border-radius: 4px; padding: 0 4px; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="brand">Nacre</p>
+  <h1>Confidentialité de l'application Nacre</h1>
+  <p>Nacre est une application pour les professionnels de la beauté et du bien-être : agenda, fiches clients, rappels par SMS. Cette page s'applique à l'application Nacre, dans sa version de test remise aux salons pilotes par TestFlight. Elle dit ce que l'application fait des données.</p>
+  <p class="muted">Mis à jour le 11 novembre 2026.</p>
+
+  <section class="bref">
+    <h2>En bref</h2>
+    <ul>
+      <li>Vos clients et vos rendez-vous sont enregistrés sur cet iPhone. L'appli ne les envoie nulle part : seuls partent les SMS et les exports que vous faites. Si la sauvegarde iCloud de l'iPhone est activée, elle en garde une copie, sous votre compte Apple. L'application n'a ni serveur, ni compte, ni mesure d'audience, ni publicité, ni outil de suivi.</li>
+      <li>L'éditeur de Nacre <strong>ne voit pas</strong> vos clients ni vos rendez-vous.</li>
+      <li>Rien ne sort de l'iPhone sans votre geste : un SMS que vous envoyez, un export que vous partagez.</li>
+    </ul>
+  </section>
+
+  <h2>Qui est responsable</h2>
+  <ul>
+    <li><strong>Vous, le professionnel</strong>, êtes responsable du fichier de vos clients que vous saisissez dans Nacre : vous décidez de ce que vous notez et de son usage.</li>
+    <li><strong>L'éditeur</strong> (Younes MELHEB, 21 rue Marcel Prévost, 34500 Béziers, <a href="mailto:younesmelheb@gmail.com">younesmelheb@gmail.com</a>, 07 50 57 35 26) fournit l'application. L'application ne lui envoie pas ces données (voir « Ce qui sort de l'iPhone »). Si vous lui confiez vous-même un fichier (par exemple un export de votre ancien logiciel), cela est encadré par votre accord avec lui.</li>
+  </ul>
+
+  <h2>Ce que l'application garde, sur votre iPhone</h2>
+  <ul>
+    <li><strong>Votre salon</strong> : nom, téléphone, adresse, horaires, équipe, prestations et prix, textes des messages, lien vers votre page d'avis.</li>
+    <li><strong>Vos clients</strong> : nom, téléphone, e-mail, formule, notes, date d'anniversaire si vous les saisissez ; leurs rendez-vous, rappels envoyés, paiements et pourboires ; la liste d'attente.</li>
+    <li>Ces données servent seulement à faire fonctionner votre agenda, vos rappels et vos chiffres.</li>
+    <li>Cette version n'a pas de champ pour les allergies. N'écrivez pas d'information sur la santé de vos clients dans les notes.</li>
+  </ul>
+
+  <h2>Ce qui sort de l'iPhone, et seulement par votre geste</h2>
+  <ul>
+    <li><strong>SMS</strong> : Nacre prépare le texte et ouvre Messages ; c'est vous qui envoyez, avec votre forfait. Nacre n'envoie aucun SMS seule.</li>
+    <li><strong>Export</strong> (Mon salon → Mes données) : un fichier des rendez-vous ou des clients, que vous partagez où vous voulez. Une fois partagé, il ne dépend plus de Nacre.</li>
+    <li><strong>Notification du soir</strong> : si vous l'acceptez, l'iPhone affiche à 18 h le nombre de rappels à envoyer pour le lendemain. Elle est créée sur l'iPhone, sans serveur, et ne contient aucun nom de client.</li>
+    <li><strong>Sauvegarde iCloud de l'iPhone</strong> : si vous l'avez activée, elle inclut les données des apps, donc celles de Nacre, sous votre compte Apple. C'est un réglage de l'iPhone (Réglages → votre nom → iCloud), pas de Nacre ; l'éditeur n'y a pas accès.</li>
+  </ul>
+
+  <h2>Pendant le test (TestFlight)</h2>
+  <p>Apple transmet à l'éditeur le nom et l'e-mail de votre invitation, le modèle de l'iPhone, la version d'iOS, le nombre d'ouvertures et de plantages, et les captures d'écran et commentaires que vous choisissez d'envoyer. Évitez d'y montrer des données de clients ; si une capture en contient, l'éditeur la supprime. Ces informations servent seulement à améliorer l'application et sont supprimées de TestFlight à la fin du test. Apple traite ces données selon sa propre politique de confidentialité.</p>
+
+  <h2>Combien de temps</h2>
+  <p>Les données restent sur l'iPhone tant que vous ne les supprimez pas. Vous pouvez supprimer une fiche client (glisser vers la gauche dans Clients) ; supprimer l'application efface tout. Nacre ne supprime rien automatiquement : c'est à vous de ne garder vos clients que le temps utile.</p>
+
+  <h2>Vos droits, et ceux de vos clients</h2>
+  <p>Vos clients s'adressent à vous pour voir, corriger ou supprimer leurs données : vous pouvez le faire dans l'application. Pour une question sur l'application ou sur vos propres données de test : <a href="mailto:younesmelheb@gmail.com">younesmelheb@gmail.com</a>. Vous pouvez aussi saisir la CNIL : <a href="https://www.cnil.fr/fr/plaintes" rel="noreferrer">cnil.fr/fr/plaintes</a>.</p>
+
+  <h2>Éditeur et hébergeur de cette page</h2>
+  <ul>
+    <li>Éditeur et directeur de la publication : Younes MELHEB, 21 rue Marcel Prévost, 34500 Béziers, 07 50 57 35 26, <a href="mailto:younesmelheb@gmail.com">younesmelheb@gmail.com</a>.</li>
+    <li>Hébergeur : GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis. GitHub ne publie pas de numéro de téléphone ; on le joint par <a href="https://support.github.com" rel="noreferrer">https://support.github.com</a>.</li>
+    <li>Quand vous consultez cette page, GitHub enregistre votre adresse IP pour la sécurité de son service.</li>
+  </ul>
+</main>
+</body>
+</html>
