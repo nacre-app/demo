@@ -1,0 +1,35 @@
+<!doctype html>
+<!--
+  Page ouverte par le lien de connexion d'un e-mail (https://<domaine>/connexion#e=<adresse>&t=<jeton>) quand
+  l'application n'est pas installée sur cet appareil (docs/v2-comptes-et-synchro.md § 3.2, exigence 7 de Garance).
+  Statique : aucun script d'un autre site, aucune requête, aucune session ouverte. Seul connexion.js, du même site,
+  efface le fragment de la barre d'adresse. La page ne lit ni n'affiche l'adresse ni le jeton.
+-->
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="theme-color" content="#f8f2ed" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#241a1f" media="(prefers-color-scheme: dark)" />
+  <title>Connexion à Nacre</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/connexion.css" />
+  <script src="/connexion.js"></script>
+</head>
+<body>
+  <main>
+    <p class="brand">Nacre</p>
+    <h1>Ouvrez ce lien sur votre téléphone</h1>
+    <p>
+      Ce lien de connexion s'ouvre dans l'application Nacre. Ouvrez l'e-mail sur le téléphone où l'application est
+      installée, puis touchez de nouveau le lien.
+    </p>
+    <p class="muted">
+      Le lien vaut une heure et ne sert qu'une fois. Vous pouvez aussi saisir dans l'application le code à 6 chiffres
+      du même e-mail. Si vous n'avez pas demandé à vous connecter, ignorez cet e-mail : personne ne peut se connecter
+      sans lui.
+    </p>
+  </main>
+</body>
+</html>

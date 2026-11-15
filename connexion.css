@@ -1,0 +1,13 @@
+/* Page /connexion : identité Nacre, lisible à 360 px, en clair et en sombre. Polices du système : aucune requête de plus. */
+:root { --bg: #f8f2ed; --fg: #241a1f; --muted: #6f6368; --accent: #c2255c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1d1418; --fg: #f8f2ed; --muted: #b3a5ab; --accent: #f0598a; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); }
+body { font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Avenir Next", system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+main { max-width: 560px; margin: 0 auto; padding: max(28px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 40px max(16px, env(safe-area-inset-left)); overflow-wrap: anywhere; }
+.brand { font-weight: 800; color: var(--accent); margin: 0 0 8px; letter-spacing: -0.01em; }
+h1 { font-size: clamp(24px, 7vw, 30px); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 14px; text-wrap: balance; }
+p { margin: 0 0 12px; max-width: 38em; }
+.muted { color: var(--muted); font-size: 15px; }
